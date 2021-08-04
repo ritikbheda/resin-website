@@ -1,0 +1,124 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "description": "This is a sample server Petstore server.  You can find out more about     Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).      For this sample, you can use the api key `special-key` to test the authorization     filters.",
+      "version": "1.0.0",
+      "title": "Swagger Petstore",
+      "termsOfService": "http://swagger.io/terms/",
+      "contact": {
+        "email": "apiteam@swagger.io"
+      },
+      "license": {
+        "name": "Apache 2.0",
+        "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+      }
+    },
+    "host": "petstore.swagger.io",
+    "tags": [
+      {
+        "name": "pet",
+        "description": "Everything about your Pets",
+        "externalDocs": {
+          "description": "Find out more",
+          "url": "http://swagger.io"
+        }
+      },
+      {
+        "name": "store",
+        "description": "Access to Petstore orders"
+      },
+      {
+        "name": "user",
+        "description": "Operations about user",
+        "externalDocs": {
+          "description": "Find out more about our store",
+          "url": "http://swagger.io"
+        }
+      }
+    ],
+    "schemes": [
+      "https",
+      "http"
+    ],
+    "paths": {
+      "/status": {
+        "get": {
+          "description": "Multiple status values can be provided with comma separated strings",
+          "operationId": "findPetsByStatus",
+          "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "type": "integer",
+                "required": false
+            
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "successful operation",
+              "schema": {
+                "type": "string",
+                "example": "ok"
+              }
+            }
+          }
+        }
+      },
+      "/contact": {
+        "get": {
+          "description": "contact company page",
+          "operationId": "getContact",
+          "responses": {
+            "200": {
+              "description": "successful operation",
+              "schema": {
+                "type": "string",
+                "example": "ok"
+              }
+            }
+          }
+        }
+      },
+      "/collection": {
+        "get": {
+          "description": "opens page for containing all items",
+          "operationId": "collection",
+          "parameters":[],
+          "responses": {
+            "200": {
+              "description": "successful operation",
+              "schema": {
+                "type": "string",
+                "example": "ok"
+              }
+            }
+          }
+        }
+      },
+      "/collection/{id}": {
+        "get": {
+          "description": "opens page for each item",
+          "operationId": "collection/{id}",
+          "parameters":[
+              {
+                  "name":"id",
+                  "type":"integer",
+                  "required":true,
+                  "in":"path"
+              }
+          ],
+          "responses": {
+            "200": {
+              "description": "successful operation",
+              "schema": {
+                "type": "string",
+                "example": "ok"
+              }
+            }
+          }
+        }
+      }
+
+    }      
+}

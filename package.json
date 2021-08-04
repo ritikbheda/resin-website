@@ -1,0 +1,20 @@
+{
+  "name": "resin-website",
+  "version": "1.0.0",
+  "description": "Resin website inital development",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ritik Bheda",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http": "*",
+    "swaggerize-express": "^4.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}

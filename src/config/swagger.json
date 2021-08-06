@@ -13,7 +13,7 @@
         "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
       }
     },
-    "host": "petstore.swagger.io",
+    "host": "localhost:3000",
     "tags": [
       {
         "name": "pet",
@@ -83,6 +83,48 @@
       "/collection": {
         "get": {
           "description": "opens page for containing all items",
+          "operationId": "collection",
+          "parameters":[],
+          "responses": {
+            "200": {
+              "description": "successful operation",
+              "schema": {
+                "type": "string",
+                "example": "ok"
+              }
+            }
+          }
+        },
+        "post": {
+          "description": "to add new item",
+          "operationId": "collection",
+          "parameters":[],
+          "responses": {
+            "200": {
+              "description": "successful operation",
+              "schema": {
+                "type": "string",
+                "example": "ok"
+              }
+            }
+          }
+        },
+        "delete": {
+          "description": "to delete a item",
+          "operationId": "collection",
+          "parameters":[],
+          "responses": {
+            "200": {
+              "description": "successful operation",
+              "schema": {
+                "type": "string",
+                "example": "ok"
+              }
+            }
+          }
+        },
+        "put": {
+          "description": "to update a item item",
           "operationId": "collection",
           "parameters":[],
           "responses": {

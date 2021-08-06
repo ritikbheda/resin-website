@@ -10,8 +10,11 @@
   "author": "Ritik Bheda",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "http": "*",
+    "mongoose": "^5.13.5",
     "swaggerize-express": "^4.0.5"
   },
   "devDependencies": {
